@@ -1,0 +1,12 @@
+kind: wasmer.io/App.v0
+owner: YOUR_WASMER_USERNAME
+name: brainstack-e-library
+package: wasmer/brainstack-e-library
+# Replace the package value after publishing the backend package to Wasmer.
+# Set secrets in the Wasmer dashboard; do not commit real credentials.
+env:
+  DATABASE_PATH: /data/brainstack.db
+  PYTHONUNBUFFERED: "1"
+volumes:
+  - name: brainstack-data
+    mount: /data
